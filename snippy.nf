@@ -2,7 +2,7 @@
 
 params.cpus = 2
 params.ref = "/data/snippy/H37rV_v3.gbk"
-params.output_dir = "tests/output_dir"
+params.output_dir = "tests/output"
 
 params.input_dir = "tests/input/"
 params.pattern = "*_R{1,2}_001.fastq.gz"
@@ -22,7 +22,7 @@ process snippy{
     echo true
     scratch true
 
-    publishDir "${params.output_dir}/", mode: "copy", pattern: "*.*"
+    publishDir "${params.output_dir}/", mode: "copy"
 
     tag {dataset_id}
 
@@ -31,11 +31,14 @@ process snippy{
     file ref
 
     output:
-    set dataset_id, file("*.*") into snippy_out
+    file("${dataset_id}/snps.vcf.gz")
+    file("${dataset_id}/snps.consensus.fa")
+    file("${dataset_id}/snps.log")
+    file("${dataset_id}/snps.aligned.fa")
 
     """
     snippy --cpus ${params.cpus } \
-           --outdir ${params.output_dir} \
+           --outdir ${dataset_id} \
            --ref ${ref} \
            --R1 ${forward} \
            --R2 ${reverse} 
