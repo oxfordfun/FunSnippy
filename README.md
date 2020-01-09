@@ -34,7 +34,7 @@ Snippy Docker file: https://hub.docker.com/r/staphb/snippy/dockerfile
    --output_dir tests/output
 ```
 
-## Run Snippy with docker
+## Run Snippy with singularity
 ```bash
    nextflow run snippy.nf -profile singularity \
    --input_dir tests/input/ \
