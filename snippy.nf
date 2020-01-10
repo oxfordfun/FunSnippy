@@ -31,10 +31,14 @@ process snippy{
     file ref
 
     output:
-    file("${dataset_id}/snps.vcf.gz")
+    file("${dataset_id}/snps.vcf")
     file("${dataset_id}/snps.consensus.fa")
     file("${dataset_id}/snps.log")
     file("${dataset_id}/snps.aligned.fa")
+    file("${dataset_id}/snps.bam")
+    file("${dataset_id}/snps.raw.vcf")
+    file("${dataset_id}/snps.filt.vcf")
+
 
     """
     snippy --cpus ${params.cpus } \
