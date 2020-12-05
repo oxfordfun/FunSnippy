@@ -43,40 +43,4 @@ Snippy Docker file: https://hub.docker.com/r/staphb/snippy/dockerfile
 ```
 
 ## Output files from a run (4 tb samples)
-
-/work/output/4dc5e34e-3ca6-44e9-82a6-413841d26eab
-4 directories, 28 files
-Total size: 931M
-
-   ├── 00578919-1e88-4ea1-99af-e71a96b9ebbf
-   │   ├── snps.aligned.fa
-   │   ├── snps.bam
-   │   ├── snps.consensus.fa
-   │   ├── snps.filt.vcf
-   │   ├── snps.log
-   │   ├── snps.raw.vcf
-   │   └── snps.vcf
-   ├── 53bd89f7-b527-4c41-ae5b-5ddda3175a0a
-   │   ├── snps.aligned.fa
-   │   ├── snps.bam
-   │   ├── snps.consensus.fa
-   │   ├── snps.filt.vcf
-   │   ├── snps.log
-   │   ├── snps.raw.vcf
-   │   └── snps.vcf
-   ├── 893942b6-b9f9-4afa-b0a1-41c750d143c6
-   │   ├── snps.aligned.fa
-   │   ├── snps.bam
-   │   ├── snps.consensus.fa
-   │   ├── snps.filt.vcf
-   │   ├── snps.log
-   │   ├── snps.raw.vcf
-   │   └── snps.vcf
-   └── a5638d9e-92af-44fd-8e76-4c388206af03
-      ├── snps.aligned.fa
-      ├── snps.bam
-      ├── snps.consensus.fa
-      ├── snps.filt.vcf
-      ├── snps.log
-      ├── snps.raw.vcf
-      └── snps.vcf
+![Output files](https://github.com/oxfordfun/FunSnippy/raw/master/output-funsnippy.png)
